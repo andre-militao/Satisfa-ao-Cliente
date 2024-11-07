@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.menu a {
+  margin: 0 15px;
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #00ff00;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-top: 50px;
+  width: 100%;
+  animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+h3 {
+  color: #ff3333;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  animation: slideInLeft 1.2s ease;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+p {
+  font-size: 18px;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button.primary {
+  background-color: #00ff00;
+}
+
+.button.secondary {
+  background-color: #ff3333;
+  border: 2px solid #00ff00;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.image-content img {
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.02);
+}
+
+/* Evaluation Section */
+.evaluation-section {
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2c2c2c;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+  color: #ffffff;
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
+
+.evaluation-section h2 {
+  font-size: 32px;
+  color: #00ff00;
+  margin-bottom: 15px;
+}
+
+.evaluation-section p {
+  font-size: 18px;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+.evaluation-category {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.evaluation-category label {
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.emoji-rating {
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+  justify-content: center;
+}
+
+.emoji-rating span {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  color: #cccccc;
+}
+
+.emoji-rating span:hover {
+  color: #00ff00;
+  transform: scale(1.2);
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider {
+  width: 80%;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #444444;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.slider:hover {
+  background: #00ff00;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.comment-section {
+  margin-top: 30px;
+}
+
+.comment-section label {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #444444;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  resize: vertical;
+}
+
+textarea::placeholder {
+  color: #b3b3b3;
+}
+
+.submit-button {
+  padding: 15px 30px;
+  background-color: #ff3333;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
