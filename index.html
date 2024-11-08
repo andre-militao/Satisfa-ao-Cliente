@@ -3,126 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação - Supermercado União</title>
+    <title>Avaliação do Supermercado União</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="navbar">
-            <div class="logo">Supermercado União</div>
-            <nav class="menu">
-                <a href="#">Início</a>
-                <a href="#">Avalie-nos</a>
-                <a href="#">Contato</a>
-                <a href="#">Ajuda</a>
-                
-            </nav>
-        </header>
+    <div class="color-line"></div>
 
-        <div class="main-content">
-            <div class="text-content">
-                <h3>Avalie sua Experiência</h3>
-                <h1>Queremos ouvir você!</h1>
-                <p>Sua opinião é essencial para continuarmos melhorando. Avalie nossos produtos, atendimento e ambiente para que possamos oferecer sempre o melhor.</p>
-                <div class="buttons">
-                    <a href="#" class="button primary">Avaliar Produtos</a>
-                    <a href="#" class="button secondary">Avaliar Atendimento</a>
+    <!-- Hero Section com CTA -->
+    <header class="hero-section">
+        <h1>Bem-vindo ao Supermercado União!</h1>
+        <p>Nosso compromisso é oferecer o melhor para você. Ajude-nos a melhorar!</p>
+        <div class="hero-buttons">
+            <a href="#evaluation-section" class="hero-button primary">Avaliar Loja</a>
+            <a href="#contact-section" class="hero-button secondary">Fale Conosco</a>
+            <a href="#help-section" class="hero-button tertiary">Precisa de Ajuda?</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Seção de Avaliação -->
+        <section id="evaluation-section" class="evaluation-section">
+            <h2>Avalie Nossa Loja</h2>
+            <p>Nos ajude a melhorar, avaliando sua experiência!</p>
+
+            <!-- Categorias de Avaliação -->
+            <div class="evaluation-category">
+                <label>Disponibilidade de Produtos</label>
+                <div class="emoji-rating">
+                    <span>😞</span><span>😐</span><span>😊</span><span>😍</span>
                 </div>
             </div>
-            <div class="image-content">
-                <img src="supermercado.jpg" alt="Supermercado União">
+            <div class="evaluation-category">
+                <label>Atendimento ao Cliente</label>
+                <div class="emoji-rating">
+                    <span>😞</span><span>😐</span><span>😊</span><span>😍</span>
+                </div>
             </div>
-        </div>
+            <div class="evaluation-category">
+                <label>Tempo de Espera</label>
+                <input type="range" min="0" max="10" step="1" class="slider">
+            </div>
+            <div class="evaluation-category">
+                <label>Organização dos Corredores</label>
+                <div class="emoji-rating">
+                    <span>😞</span><span>😐</span><span>😊</span><span>😍</span>
+                </div>
+            </div>
+            <div class="evaluation-category">
+                <label>Qualidade dos Produtos</label>
+                <div class="emoji-rating">
+                    <span>😞</span><span>😐</span><span>😊</span><span>😍</span>
+                </div>
+            </div>
+            <div class="evaluation-category">
+                <label>Limpeza da Loja</label>
+                <div class="emoji-rating">
+                    <span>😞</span><span>😐</span><span>😊</span><span>😍</span>
+                </div>
+            </div>
+            <div class="evaluation-category">
+                <label>Promoções Disponíveis</label>
+                <div class="emoji-rating">
+                    <span>😞</span><span>😐</span><span>😊</span><span>😍</span>
+                </div>
+            </div>
+
+            <!-- Seção de Comentário -->
+            <div class="comment-section">
+                <label for="comment">Deixe seu Comentário</label>
+                <textarea id="comment" placeholder="Conte-nos mais sobre sua experiência..."></textarea>
+            </div>
+            <button class="submit-button">Enviar Avaliação</button>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contact-section" class="contact-section">
+            <h2>Contato</h2>
+            <p>Para dúvidas, entre em contato conosco!</p>
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Escreva sua mensagem..."></textarea>
+            <button class="submit-button">Enviar</button>
+        </section>
+
+        <!-- Seção de Ajuda -->
+        <section id="help-section" class="help-section">
+            <h2>Ajuda</h2>
+            <p>Confira as perguntas frequentes ou fale com nossa equipe.</p>
+            <button class="faq-button">Ver FAQ</button>
+        </section>
     </div>
 
-    <div class="evaluation-section">
-        <h2>Avalie sua Experiência no Supermercado União</h2>
-        <p>Ajude-nos a melhorar! Avalie os aspectos abaixo e deixe um comentário sobre a sua experiência.</p>
-    
-        <div class="evaluation-category">
-            <label for="product-availability">Disponibilidade de Produtos:</label>
-            <div class="emoji-rating" id="product-availability">
-                <span>😞</span><span>😕</span><span>😐</span><span>😊</span><span>😍</span>
-            </div>
-        </div>
-    
-        <div class="evaluation-category">
-            <label for="service-quality">Qualidade do Atendimento:</label>
-            <div class="emoji-rating" id="service-quality">
-                <span>😞</span><span>😕</span><span>😐</span><span>😊</span><span>😍</span>
-            </div>
-        </div>
-    
-        <div class="evaluation-category">
-            <label for="waiting-time">Tempo Médio de Espera:</label>
-            <div class="slider-container">
-                <input type="range" min="1" max="5" value="3" class="slider" id="waiting-time">
-            </div>
-        </div>
-    
-        <div class="evaluation-category">
-            <label for="cleanliness">Limpeza e Organização:</label>
-            <div class="emoji-rating" id="cleanliness">
-                <span>😞</span><span>😕</span><span>😐</span><span>😊</span><span>😍</span>
-            </div>
-        </div>
-    
-        <div class="evaluation-category">
-            <label for="pricing">Preço dos Produtos:</label>
-            <div class="emoji-rating" id="pricing">
-                <span>😞</span><span>😕</span><span>😐</span><span>😊</span><span>😍</span>
-            </div>
-        </div>
-    
-        <div class="comment-section">
-            <label for="comment">Deixe seu comentário:</label>
-            <textarea id="comment" placeholder="Conte-nos mais sobre sua experiência..."></textarea>
-        </div>
-    
-        <button class="submit-button">Enviar Avaliação</button>
-    </div>
-    
-        <button class="submit-button">Enviar Avaliação</button>
-    </div>
-
-    <div class="help-section">
-    <h2>Precisa de Ajuda?</h2>
-    <p>Estamos aqui para te ajudar! Veja abaixo as respostas para dúvidas comuns ou entre em contato diretamente conosco.</p>
-
-    <div class="faq">
-        <div class="faq-item">
-            <h3>Como posso encontrar um produto específico?</h3>
-            <p>Você pode utilizar nossa barra de pesquisa ou verificar as seções disponíveis na loja para encontrar o que precisa.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Qual é o horário de funcionamento?</h3>
-            <p>Nossos horários de funcionamento são de segunda a sábado, das 7h às 22h20. Aos domingos, abrimos das 7h às 14h.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Como faço para trocar um produto?</h3>
-            <p>Para trocar um produto, apresente o cupom fiscal e o produto na loja dentro de 30 dias após a compra.</p>
-        </div>
-    </div>
-</div>
-
-<div class="contact-section">
-    <h2>Fale Conosco</h2>
-    <p>Se você tiver dúvidas, sugestões ou reclamações, envie uma mensagem para nossa equipe.</p>
-
-    <form class="contact-form">
-        <label for="name">Nome</label>
-        <input type="text" id="name" placeholder="Seu nome" required>
-
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Seu e-mail" required>
-
-        <label for="message">Mensagem</label>
-        <textarea id="message" placeholder="Escreva sua mensagem..." required></textarea>
-
-        <button type="submit" class="submit-button">Enviar Mensagem</button>
-    </form>
-</div>
-
-    
+    <script>
+        // Interação com as Emojis de Avaliação
+        document.querySelectorAll('.emoji-rating span').forEach(span => {
+            span.addEventListener('click', function() {
+                document.querySelectorAll('.emoji-rating span').forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+    </script>
 </body>
 </html>
